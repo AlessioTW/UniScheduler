@@ -1,4 +1,8 @@
-<h3> {{ exam.name}} </h3>
-<h3> {{ exam.cfu}} </h3>
-<h3> {{ exam.completed}} </h3>
-<h3> {{ exam.description}} </h3>
+<div class="column wrapper">
+    <p> {{ exam.name }} </p>
+    <p> {{ exam.cfu }} </p>
+    <!-- <p> {{ exam.description}} </p> -->
+    <p *ngIf="exam.completed"> Completato!</p>
+
+</div>
+

@@ -8,6 +8,10 @@ export interface Exam {
     description: string;
 }
 
+export interface Exams {
+  items: Exam[];
+}
+
 export interface Options {
     headers?:
       | HttpHeaders

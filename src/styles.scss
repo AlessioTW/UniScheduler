@@ -8,6 +8,12 @@ html, body, app-root {
 	height: 100%;
 }
 
+app-home {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
 app-root {
 	display: flex;
 	flex-direction: column; /* stack items vertically, must be with display: flex. */
@@ -17,11 +23,17 @@ app-root {
 	justify-content: space-between; /* put equal space between items, but no at first or last */
 }
 
+.wrap {
+	flex-wrap: wrap;
+  }  
+
 .column {
+	display: flex;
 	flex-direction: column;
 }
 
 .row {
+	display: flex;
 	flex-direction: row;
 }
 
@@ -34,4 +46,21 @@ app-root {
 
 .hidden {
 	display: none;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.full-center {
+	align-items: center;
+	justify-content: center;
+}
+
+.hidden {
+display: none;
 }

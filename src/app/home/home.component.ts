@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ExamComponent } from "../components/exam/exam.component";
-import { Exam } from '../../types'
+import { Exam, Exams } from '../../types'
 import { ExamsService } from '../services/exams.service';
 import { CommonModule } from '@angular/common';
 
@@ -18,8 +18,9 @@ export class HomeComponent {
 
   fetchExams() { // fetch exams from the server
     this.examsService.getExams('http://localhost:3000/exams').subscribe({
-      next: (exams) => {
-        this.exams = Object.values(exams);
+      next: (data: Exams) => {
+        this.exams = data.items;
+        console.log('Exams from getExams:', this.exams);
       },
       error: (error) => {
         console.error('There was an error!', error);
