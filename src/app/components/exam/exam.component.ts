@@ -11,9 +11,4 @@ import { CommonModule } from '@angular/common';
 })
 export class ExamComponent {
   @Input() exam!: Exam;
-
-  ngOnInit() {
-    console.log("cfu:"+  this.exam.cfu);
-    console.log("description:"+  this.exam.description);
-  }
 }

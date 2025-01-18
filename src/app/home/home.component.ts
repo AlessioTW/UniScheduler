@@ -20,7 +20,6 @@ export class HomeComponent {
     this.examsService.getExams('http://localhost:3000/exams').subscribe({
       next: (data: Exams) => {
         this.exams = data.items;
-        console.log('Exams from getExams:', this.exams);
       },
       error: (error) => {
         console.error('There was an error!', error);

@@ -1,3 +1,6 @@
+@use '../src/styles/variables.scss' as *;
+@import "primeicons/primeicons.css";
+
 html, body, p, h1, h2, h3, h4 {
 	margin: 0;
 	padding: 0;
@@ -6,12 +9,6 @@ html, body, p, h1, h2, h3, h4 {
 
 html, body, app-root {
 	height: 100%;
-}
-
-app-home {
-	width: 100%;
-	height: 100%;
-	display: flex;
 }
 
 app-root {
@@ -24,8 +21,8 @@ app-root {
 }
 
 .wrap {
-	flex-wrap: wrap;
-  }  
+	flex-wrap: wrap; /* if there's not enough space for items move the last in the below */
+}  
 
 .column {
 	display: flex;
@@ -35,6 +32,18 @@ app-root {
 .row {
 	display: flex;
 	flex-direction: row;
+}
+
+.gap-1 {
+	gap: 1rem;
+}
+
+.gap-05 {
+	gap: 0.5rem;
+}
+
+.gap-03 {
+	gap: 0.3rem;
 }
 
 .align-center {
@@ -48,19 +57,11 @@ app-root {
 	display: none;
 }
 
-.align-center {
-	align-items: center;
-}
-
-.justify-center {
-	justify-content: center;
-}
-
 .full-center {
 	align-items: center;
 	justify-content: center;
 }
 
 .hidden {
-display: none;
+	display: none;
 }

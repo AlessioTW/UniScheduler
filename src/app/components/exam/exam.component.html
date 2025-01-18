@@ -1,8 +1,18 @@
 <div class="column wrapper">
-    <p> {{ exam.name }} </p>
-    <p> {{ exam.cfu }} </p>
-    <!-- <p> {{ exam.description}} </p> -->
-    <p *ngIf="exam.completed"> Completato!</p>
 
+    <div class="row gap-03">
+        <span class="label">Exam:</span>
+        <span class="value">{{exam.name}}</span>
+    </div>
+
+    <div class="row gap-03">
+        <span class="label">CFU:</span>
+        <span class="value">{{exam.cfu}}</span>
+    </div>
+
+    <div class="row gap-03">
+        <span class="label">Stato:</span>
+        <span class="pi pi-circle-fill" [ngClass]="exam.completed ? 'completed' : 'not-completed'"></span>
+    </div>
 </div>
 
