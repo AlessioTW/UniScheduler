@@ -1,7 +1,7 @@
 import { HttpContext, HttpHeaders, HttpParams } from "@angular/common/http";
 
 export interface Exam {
-    id: string;
+    id?: number;
     name: string;
     cfu: number;
     completed: boolean;

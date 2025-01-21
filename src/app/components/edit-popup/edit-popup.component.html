@@ -1,0 +1,47 @@
+<p-dialog
+  [header]="header"
+  [(visible)]="display"
+  [modal]="true"
+  [closable]="false"
+>
+  <div class="column gap-1 form-wrapper" [formGroup]="examForm">
+    <!-- Name -->
+    <div class="row gap-05">
+      <span class="price-label">Name:</span>
+      <input type="text" formControlName="name" />
+    </div>
+
+    <div class="row gap-05">
+      <span class="price-label">CFU:</span>
+      <input type="number" formControlName="cfu" />
+    </div>
+
+    <div class="row gap-05">
+      <span class="price-label">Completed:</span>
+      <input type="checkbox" formControlName="completed" />
+    </div>
+
+    <div class="row gap-05">
+      <span class="price-label">Description:</span>
+      <input type="text" formControlName="description" />
+    </div>
+    
+  </div>
+
+  <!-- <p-footer> -->
+    <button
+      type="button"
+      pButton
+      icon="pi pi-check"
+      (click)="onConfirm()"
+      label="Confirm"
+    ></button>
+    <button
+      type="button"
+      pButton
+      icon="pi pi-times"
+      (click)="onCancel()"
+      label="Cancel"
+    ></button>
+  <!-- </p-footer> -->
+</p-dialog>

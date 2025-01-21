@@ -11,8 +11,18 @@
     </div>
 
     <div class="row gap-03">
-        <span class="label">Stato:</span>
+        <span class="label">State:</span>
         <span class="pi pi-circle-fill" [ngClass]="exam.completed ? 'completed' : 'not-completed'"></span>
+    </div>
+
+    <div class="row gap-05">
+        <button
+          type="button"
+          pButton
+          icon="pi pi-pencil"
+          (click)="editExam()"
+          label="Edit"
+        ></button>
     </div>
 </div>
 

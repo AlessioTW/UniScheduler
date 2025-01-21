@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
-import { Exam, Exams } from '../../types';
+import { Exams } from '../../types';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -16,6 +16,14 @@ export class ExamsService {
     return this.apiService.get(url, {
       responseType: 'json',
     });
+  };
+
+  editExam = (url: string, body: any): Observable<any> => {
+    return this.apiService.put(url, body, {});
+  };
+
+  deleteExam = (url: string): Observable<any> => {
+    return this.apiService.delete(url, {});
   };
 
 }

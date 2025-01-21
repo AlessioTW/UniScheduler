@@ -1,5 +1,12 @@
 <div class="column">
-    <div class="row wrap space-between">
-        <app-exam *ngFor="let exam of exams" [exam]="exam"></app-exam>
+    <div class="row wrap space-between gap-15">
+        <app-exam *ngFor="let exam of exams" [exam]="exam" (edit)="toggleEditPopup($event)"></app-exam>
     </div>
 </div>
+
+<app-edit-popup
+  [exam]="selectedExam"
+  [(display)]="displayEditPopup"
+  (confirm)="onConfirmEdit($event)"
+  header="Edit Exam"
+></app-edit-popup>

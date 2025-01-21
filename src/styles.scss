@@ -1,10 +1,10 @@
 @use '../src/styles/variables.scss' as *;
-@import "primeicons/primeicons.css";
+@import 'primeicons/primeicons.css';
 
 html, body, p, h1, h2, h3, h4 {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box; 
+	box-sizing: border-box; // dimensions of the element are calculated including padding and border
 }
 
 html, body, app-root {
@@ -32,6 +32,10 @@ app-root {
 .row {
 	display: flex;
 	flex-direction: row;
+}
+
+.gap-15 {
+	gap: 1.5rem;
 }
 
 .gap-1 {
